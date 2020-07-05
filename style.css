@@ -70,6 +70,29 @@ h1 {
     border: 1px solid grey; 
 }
 
+/* Modifs Marion*/
+.titreMission {
+    font-size: 1rem;
+}
+.textMission {
+    font-size: 0.8rem;
+}
+.missionLink {
+    text-decoration:none !important;
+}
+.missionLink:hover div {
+    background-color: rgb(190, 224, 183);
+}
+
+.titrePageMission{
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+
+}
+
+/* Fin modifs Marion */
+
 .mailMenu {
     font-weight: bold;
     background-color: rgb(189, 189, 189);
