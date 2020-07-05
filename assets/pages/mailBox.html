@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+    <title>Connexion - N. AUSSEIL - Boîte de réception</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>Session : N. Ausseil - <a href="../../index.html">Déconnexion</a></div>
+    <header class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-2 container-row">
+                <a href="homePage.html">
+                    <img class="col-12" src="../pictures/dgse_logo.jpg" alt="DGSE">
+                </a>
+            </div>
+            <h1 class="col-8 pt-5 m-auto text-center underline">Courrier électronique</h1>
+            <div class="col-2 container-row">
+                <div class="col-2"></div>
+                <img class="col-8" src="../pictures/min_armees_logo.jpg" alt="Ministrère des armées">
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <video id="transmissionVid" controls>
+            <source src="../videos/transmission.avi" type="video/avi">
+        </video>
+        <div class="container-fluid row">
+            <div class="col-2 no-gutters pt-3 container mailMenu">
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/inbox_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="mailBox.html">Boîte de réception</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/sent_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="sentBox.html">Envoyés</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/draft_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="drafts.html">Brouillons</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/spam_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="spams.html">Spams</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/trash_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="trashbin.html">Corbeille</a>
+                </div>
+            </div>
+            <div class="col-10 no-gutters p-0 mailbox">
+                <a class="emailLink" href="missionMail.html">
+                    <div class="p-2 email">
+                        <div class="container-fluid row mt-1 pt-2">
+                            <div class="container row col-2">
+                                <input class="col-3 m-0 mt-2" type="checkbox">
+                                <p class="col-9 mb-0 font-weight-bold">SINVAL Marc</p>
+                            </div>
+                            <div class="col-7">
+                                <p class="mb-0"><span class="font-weight-bold">Ordre de mission CODE : I 51MP50N</span> -
+                                    <span>Agent Ausseil, Je vous fais parvenir comme conven...</strong></span></p>
+                            </div>
+                            <div class="col-1 container">
+                                <div class="row">
+                                    <img class="col-5 pt-2" src="../pictures/attach.png" alt="attach">
+                                    <div class="col-7"></div>
+                                </div>
+                            </div>
+                            <div class="col-2 text-right">
+                                <p class="mailDate">25 juil. - 7:38</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                    <div class="p-2 email unsafeMail" onclick="openModal('unsafeModal')">
+                        <div class="container-fluid row mt-1 pt-2">
+                            <div class="container row col-2">
+                                <input class="col-3 m-0 mt-2" type="checkbox">
+                                <p class="col-9 mb-0">BARBE Ariane</p>
+                            </div>
+                            <div class="col-7">
+                                <p class="mb-0"><span>Joyeux anniversaire...</span> -
+                                    <span class="mailContent">Voir... Objet du mail...</strong></span></p>
+                            </div>
+                            <div class="col-1 container"></div>
+                            <div class="col-2 text-right">
+                                <p class="mailDate">9 juil. - 13:12</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div id="unsafeModal" class="modal">
+            <div class="modalContent p-2">
+                <span id="closeIcon" class="close" onclick="closeModal('unsafeModal')">&times;</span>
+                <div class="container row">
+                    <h3 class="text-center m-auto pb-3">Consultation non-autorisée.</h3>
+                    <p class="text-center m-auto">La communication a été détecté comme personnelle et potentiellement dangereuse. La consultation de ce courrier n'est pas autorisée.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

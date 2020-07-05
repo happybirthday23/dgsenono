@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+header {
+    margin-bottom: 10%;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.8rem !important;
+}
+
+.frame {
+    border: 2px solid darkblue;
+    padding: 2%;
+}
+
+.connection {
+    height: 100vh;
+    color: white;
+}
+
+.waitDot:nth-child(1) circle {
+    animation: 2.5s linear infinite dot;
+}
+
+.waitDot:nth-child(2) circle {
+    animation: 2.5s 0.5s linear infinite dot;
+}
+
+.waitDot:nth-child(3) circle {
+    animation: 2.5s 1s linear infinite dot;
+}
+
+.waitDot:nth-child(4) circle {
+    animation: 2.5s 1.5s linear infinite dot;
+}
+
+.waitDot:nth-child(5) circle {
+    animation: 2.5s 2s linear infinite dot;
+}
+
+.underline {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.profileCard {
+    cursor: pointer;
+}
+
+.profileCard p {
+    font-weight: bold;
+    transition: color 0.5s;
+}
+
+.profileCard img {
+    transition: filter 0.5s;
+}
+
+.profileCard:hover p{
+    color: rgb(34, 148, 255);
+    transition: all 0.5s;
+}
+
+.profileCard:hover img {
+    filter: drop-shadow(0px 0px 1.5px rgba(0,0,0,0.9));
+    transition: all 0.5s;
+}
+
+.profilePic {
+    border: 1px solid grey; 
+}
+
+/* Modifs Marion*/
+.titreMission {
+    font-size: 1rem;
+}
+.textMission {
+    font-size: 0.8rem;
+}
+.missionLink {
+    text-decoration:none !important;
+}
+.missionLink:hover div {
+    background-color: rgb(190, 224, 183);
+}
+
+.titrePageMission{
+    font-weight: bold;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+
+}
+
+/* Fin modifs Marion */
+
+.mailMenu {
+    font-weight: bold;
+    background-color: rgb(189, 189, 189);
+}
+
+.mailMenu a {
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 5%;
+}
+
+.mailMenu a:hover {
+    text-decoration: none;
+}
+
+.mailbox {
+    background-color: rgb(228, 228, 228);
+}
+
+.mailbox a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.mailbox a:hover {
+    text-decoration: none;
+}
+
+.email {
+    border-bottom: 1px solid darkblue;
+}
+
+.email:hover {
+    background-color: darkblue;
+    color: white;
+    transition: all 0.5s;
+}
+
+.mailContent {
+    color: rgb(151, 151, 151);
+}
+
+.unsafeMail {
+    cursor: pointer;
+}
+
+.mailDate {
+    font-size: 0.8rem;
+}
+
+.mailContainer {
+    border: 1px solid grey;
+}
+
+.emitterName {
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.emitterAddress {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.emitterDate {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.enclosed {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid darkblue;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.close {
+    float: right;
+    font-size: 2.5rem !important;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: red !important;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#enclosedModal01 .modalContent, #enclosedModal02 .modalContent, #enclosedModal03 .modalContent {
+    margin: 2% auto;
+    width: fit-content;
+    padding-left: 1%;
+    padding-bottom: 1%;
+}
+
+#deniedModal .modalContent {
+    border-color: red;
+}
+
+#unsafeModal .modalContent {
+    border-color: red;
+    color: red;
+}
+
+#videoModal {
+    border: 1px solid red;
+}
+
+#transmissionContainer {
+    margin-bottom: 1.5%;
+    margin-top: 1.5%;
+}
+
+#transmission {
+    color: red;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+#transmissionModal {
+    border: 1px solid red;
+}
+
+#transmissionVid {
+    display: none;
+}
+
+@keyframes dot {
+    5% {
+        fill: white;
+        stroke: white;
+        stroke-width: 0;
+    }
+    20% {
+        fill: darkblue;
+        stroke: darkblue;
+        stroke-width: 2px;
+    }
+    40% {
+        fill: white;
+        stroke: white;
+        stroke-width: 0;
+    }
+}
+
+
+/* Tentative d'animation */
+.fadeIn:hover {
+    color: darkblue;
+}
+
+.fadeIn::before, .fadeIn::after {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+}
+
+.fadeIn::before {
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
+    transform: scale3d(0, 1, 1);
+}
+
+.fadeIn::after {
+    border-left: 2px solid darkblue;
+    border-right: 2px solid darkblue;
+    transform: scale3d(1, 0, 1);
+}
+
+.fadeIn:hover::before, .fadeIn:hover::after {
+    transform: scale3d(1, 1, 1);
+    transition: transform 0.5s;
+}
