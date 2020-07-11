@@ -2,7 +2,7 @@
 <html lang="FR">
 
 <head>
-    <title>CDGSE Intranet - Missions</title>
+    <title>DGSE Intranet - Activation agent</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../style.css" rel="stylesheet" type="text/css">
@@ -34,30 +34,33 @@
                 <div class="col-8 p-0 frame">
                     <!-- Début -->
                     <div class="text-center  no-gutters p-3 titrePageMission">
-                        <h3>Mission I 51MP50N - Affaire Raditchkov</h3>
+                        <h3>Activation d'agent dormant - Mission I 51MP50N</h3>
                     </div>
-                    <div class="container-fluid">
+                    <div class="container-fluid mb-4">
                         <div class="row">
-                            <div class="p-3 col-9">
-                                <h6 class="font-weight-bold">Résumé de mission:</h6>
-                                <p>Protection de l’invention du professeur contre les mafias balkaniques.</p>
-                                <h6 class="font-weight-bold">Étape 1 / 2 : </h6>
-                                <ul>
-                                    <li>Interception de données potientiellement sensibles lors d'une rencontre entre deux
-                                        cibles.</li>
-                                    <li>Évaluation des informations récupérées en vue d'une intervention sur site.</li>
-                                </ul>
-                                <h6 class="font-weight-bold">Étape 2 / 2 : </h6>
-                                <ul>
-                                    <li>Intervention sur site.</li>
-                                    <li>Sécurisation de l'objectif.</li>
-                                </ul>
+                            <div class="col-12 mt-2">
+                                <h5>5 agent(s) à proximité.</h5>
+                                <p>Veuillez procéder à l'activation des agents en indiquant le lieu et l'heure de
+                                    l'opération.</p>
                             </div>
-                            <div class="col-3 p-3 moleActivation">
-                                <div class="text-center">
-                                    <h5 class="mb-4 mt-5 moleTitle">5 agent(s) dormant(s) disponible(s) dans le secteur d'opération.</h5>
-                                    <button class="btn btn-primary" onclick="window.location.href='activation.html'">Requête d'activation</button>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 container-row">
+                                <div class="rdvMap">
+                                    <svg id="svgMap" height="100%" width="100%" viewBox="0 0 10 100" onclick="clickMap()">
+                                        <circle id="correctZone" cx="0" cy="100" r="10" fill="green" onclick="correctSpot()"></circle>
+                                    </svg>
                                 </div>
+                                <img class="col-12" src="../pictures/map.jpg" alt="carte">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-3 col-12 text-center">
+                                <label>Horaire de rendez-vous :</label>
+                                <input id="meetingTime" type="time">
+                            </div>
+                            <div class="col-12 text-center">
+                                <button id="activationButton" class="btn btn-secondary" disabled onclick="activationCheck()">Transmettre instructions</button>
                             </div>
                         </div>
                     </div>

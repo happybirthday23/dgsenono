@@ -84,14 +84,35 @@ h1 {
     background-color: rgb(190, 224, 183);
 }
 
-.titrePageMission{
+.titrePageMission {
+    background-color: darkblue;
+}
+
+.titrePageMission h3{
     font-weight: bold;
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
+    color: white;
+    
 
 }
 
 /* Fin modifs Marion */
+
+.moleActivation {
+    background-color: rgb(189, 189, 189);
+    color: darkblue;
+    font-size: 1rem;
+}
+
+.rdvMap {
+    position: absolute;
+    width: 94%;
+    height: 100%;
+    margin-left: 1.2%;
+    cursor: pointer;
+    z-index: 1;
+}
 
 .mailMenu {
     font-weight: bold;

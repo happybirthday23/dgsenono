@@ -101,3 +101,49 @@ if(transmissionVid) transmissionVid.onended = function() {
     videoModal.style.display = 'none';
 }
 
+function clickMap() {
+    let mousePosX = event.clientX;
+    let mousePosY = event.clientY;
+    let rect = event.target.getBoundingClientRect();
+
+    let xPos = mousePosX - (rect.left * 2.56);
+    let yPos = mousePosY - rect.top;
+
+    let xPercent = mousePosX / window.innerWidth * 100;
+    let xCorrect = 2010/ window.innerWidth * 100;
+    let yPercent = mousePosY / window.innerHeight * 100;
+    let yCorrect = 186 / window.innerHeight * 100;
+    let svgMap = document.getElementById('svgMap');
+
+    //let clickedSpot = document.createElement('circle', ['cx = 10', 'cy = 60', 'r = 10', 'stroke = red', 'stroke-width = 2px', 'fill = none']);
+    let clickedSpot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    //clickedSpot.setAttribute('cx', (xPercent * 2.77) - xCorrect);
+    clickedSpot.setAttribute('cx', xPos * 0.18);
+    //clickedSpot.setAttribute('cy', (yPercent * 1.31) - yCorrect);
+    clickedSpot.setAttribute('cy', yPos * 0.18);
+    clickedSpot.setAttribute('r', '2');
+    clickedSpot.setAttribute('stroke', 'red');
+    clickedSpot.setAttribute('stroke-width', '1');
+    clickedSpot.setAttribute('fill', 'none');
+
+
+    svgMap.appendChild(clickedSpot);
+    console.log('pos : ' + xPercent + ' - ' + yPercent);
+}
+
+function correctSpot() {
+    console.log('NICEUH!!');
+}
+
+function activationCheck() {
+    let meetingTime = document.getElementById('meetingTime').nodeValue;
+    let activationButton = document.getElementById('activationButton');
+
+    console.log('le meeting time : ' + meetingTime);
+
+    if (meetingTime) {
+        activationButton.removeAttribute('disabled');
+        activationButton.classList.add('btn-primary');
+        activationButton.classList.remove('btn-secondary');
+    }
+}
