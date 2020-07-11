@@ -93,8 +93,15 @@ h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.4rem;
     color: white;
-    
+}
 
+.titreProfile{
+    font-family:'Oswald', sans-serif;
+    text-align: center;
+}
+
+.itemProfile{
+    font-weight: bold;
 }
 
 /* Fin modifs Marion */
