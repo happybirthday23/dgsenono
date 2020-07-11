@@ -2,16 +2,15 @@
 <html lang="FR">
 
 <head>
-    <title>CDGSE Intranet - Missions</title>
+    <title>CDGSE Intranet - Documents</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../favicon.ico">
     <link href="../../style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
-<body>
+<body onload="videoMessage()">
     <div>Session : N. Ausseil - <a href="../../index.html">Déconnexion</a></div>
     <header class="container-fluid mb-5">
         <div class="row">
@@ -20,7 +19,7 @@
                     <img class="col-12" src="../pictures/dgse_logo.jpg" alt="DGSE">
                 </a>
             </div>
-            <h1 class="col-8 pt-5 m-auto text-center underline">Missions</h1>
+            <h1 class="col-8 pt-5 m-auto text-center underline">Documents</h1>
             <div class="col-2 container-row">
                 <div class="col-2"></div>
                 <img class="col-8" src="../pictures/min_armees_logo.jpg" alt="Ministrère des armées">
@@ -34,35 +33,14 @@
                 <div class="col-2"></div>
                 <div class="col-8 p-0 frame">
                     <!-- Début -->
-                    <div class="text-center  no-gutters p-3 titrePageMission">
-                        <h3>Mission I 51MP50N - Affaire Raditchkov</h3>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="p-3 col-9">
-                                <h6 class="font-weight-bold">Résumé de mission:</h6>
-                                <p>Protection de l’invention du professeur contre les mafias balkaniques.</p>
-                                <h6 class="font-weight-bold">Étape 1 / 2 : </h6>
-                                <ul>
-                                    <li>Interception de données potientiellement sensibles lors d'une rencontre entre deux
-                                        cibles.</li>
-                                    <li>Évaluation des informations récupérées en vue d'une intervention sur site.</li>
-                                </ul>
-                                <h6 class="font-weight-bold">Étape 2 / 2 : </h6>
-                                <ul>
-                                    <li>Intervention sur site.</li>
-                                    <li>Sécurisation de l'objectif.</li>
-                                </ul>
-                            </div>
-                            <div class="col-3 p-3 moleActivation">
-                                <div class="text-center">
-                                    <h5 class="mb-4 mt-5 moleTitle">Agent(s) dormant(s) disponible(s) dans le secteur d'opération.</h5>
-                                    <button class="btn btn-primary" onclick="window.location.href='activation.html'">Requête d'activation</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
+                    <ul class="list-group">
+                        <a href="../pictures/pj1.gif" class="list-group-item list-group-item-action list-group-item-light">Code international des signaux maritimes</a>
+                        <a href="../pictures/pj3.png" class="list-group-item list-group-item-action list-group-item-light">Hiéroglyphes</a>
+                        <a href="../pictures/pj4.gif" class="list-group-item list-group-item-action list-group-item-light">Code morse international</a>
+                        <a href="../pictures/pj5.png" class="list-group-item list-group-item-action list-group-item-light">Alphabet binaire</a>
+                        <a href="../pictures/pj6.png" class="list-group-item list-group-item-action list-group-item-light">Code Baudot</a>
+                    </ul>
                     <!-- Fin -->
                 </div>
             </div>

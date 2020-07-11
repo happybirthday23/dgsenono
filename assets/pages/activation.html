@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="FR">
+
+<head>
+    <title>DGSE Intranet - Activation agent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>Session : N. Ausseil - <a href="../../index.html">Déconnexion</a></div>
+    <header class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-2 container-row">
+                <a href="homePage.html">
+                    <img class="col-12" src="../pictures/dgse_logo.jpg" alt="DGSE">
+                </a>
+            </div>
+            <h1 class="col-8 pt-5 m-auto text-center underline">Missions</h1>
+            <div class="col-2 container-row">
+                <div class="col-2"></div>
+                <img class="col-8" src="../pictures/min_armees_logo.jpg" alt="Ministrère des armées">
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 p-0 frame">
+                    <!-- Début -->
+                    <div class="text-center  no-gutters p-3 titrePageMission">
+                        <h3>Activation d'agent dormant - Mission I 51MP50N</h3>
+                    </div>
+                    <div class="container-fluid mb-4">
+                        <div class="row">
+                            <div class="col-12 mt-2">
+                                <h5>Agent(s) détécté(s) à proximité.</h5>
+                                <p>Veuillez procéder à l'activation des agents en indiquant le lieu et l'heure de
+                                    l'opération.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 container-row no-gutters">
+                                <div id="rdvMap">
+                                    <svg id="svgMap" height="100%" width="100%" viewBox="0 0 100 59"
+                                        onclick="clickedSpot('Lieu non répertorié')" onmousemove="hoverMap()"
+                                        onmouseout="clearHover()">
+                                        <circle cx="18" cy="34" r="4.2"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Gare Saint-Lazare')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                        <circle cx="71" cy="14" r="0.8"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Musée du chocolat')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                        <circle cx="51" cy="19" r="0.8"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Musée Grévin')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                        <circle cx="32" cy="17" r="1.4"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Palais Garnier')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="16" cy="11" r="1.5"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Église de la Madeleine')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="5" cy="29" r="0.8"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Église Saint-Augustin')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="29.5" cy="23.5" r="0.8" 
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Galeries Lafayette')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="31.3" cy="35" r="1.4"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Église de la Sainte Trinité')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="44" cy="51" r="1.1" 
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Pigalle')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="84" cy="47" r="2.7" 
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Gare du Nord')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="91.5" cy="33" r="2.7" 
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Gare de l\'Est')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="27" cy="3" r="1.5" 
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Place Vendôme')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+
+                                            <circle cx="49" cy="34" r="0.5"
+                                            fill="rgba(0, 0, 0, 0)" onclick="clickedSpot('Dream Café')"
+                                            onmouseover="removeParentClick()" onmouseout="resetParentClick()"></circle>
+                                    </svg>
+                                </div>
+                                <img class="col-12" src="../pictures/map.jpg" alt="carte">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="p-2 col-12 text-center">
+                                <label>Lieu du rendez-vous :</label>
+                                <input id="rdvPlace" readonly onchange="completionCheck()">
+                            </div>
+                            <div class="p-3 col-12 text-center">
+                                <label>Horaire de rendez-vous :</label>
+                                <input id="rdvTime" type="time" onchange="completionCheck()">
+                            </div>
+                            <div class="col-12 text-center">
+                                <button id="activationButton" class="btn btn-secondary" disabled
+                                    onclick="activationCheck()">Transmettre instructions</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fin -->
+                </div>
+            </div>
+        </div>
+
+        <div id="wrongPlaceModal" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('wrongPlaceModal')">&times;</span>
+                <div>
+                    <h3>Lieu refusé.</h3>
+                    <p>Le lieu indiqué est considéré comme trop risqué ou n'apparaît pas dans la base de données de
+                        l'agence.</p>
+                    <p>Une rencontre à cette localisation pourrait compromettre l'identité des agents sous couverture.
+                    </p>
+                    <p>Veuillez choisir un autre endroit.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="wrongTimeModal" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('wrongTimeModal')">&times;</span>
+                <div>
+                    <h3>Organisation de rendez-vous impossible</h3>
+                    <p>L'horaire sélectionné entre en conflit avec l'emploi du temps d'un des agents sélectionnés pour
+                        la raison suivante :</p>
+                    <p id="excuse"></p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="../../script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
