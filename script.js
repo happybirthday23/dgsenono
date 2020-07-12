@@ -232,7 +232,7 @@ function activationCheck() {
     let rdvPlace = document.getElementById('rdvPlace').value;
 
     if (rdvTime == '17:30' && rdvPlace == 'Dream Café') {
-        window.location.href = 'homepage.html#validated';
+        window.location.href = 'homePage.html#validated';
     } else if (rdvPlace == 'Dream Café') {
         let excuses = [
             'Est à la salle.',
