@@ -117,7 +117,17 @@ function readCheck() {
         document.getElementById('unreadEmitter').classList.remove('font-weight-bold');
         document.getElementById('unreadTitle').classList.remove('font-weight-bold');
         document.getElementById('unreadBody').classList.add('mailContent');
-        document.getElementById('unreadBody').innerHTML = 'Agent Ausseil, Je vous fais parvenir comme convenu l...'
+        document.getElementById('unreadBody').innerHTML = 'Agent Ausseil, Je vous fais parvenir comme convenu l...';
+    } else if (window.location.hash == '#allRead') {
+        document.getElementById('validationEmail').classList.remove('d-none');
+        document.getElementById('unreadEmitter').classList.remove('font-weight-bold');
+        document.getElementById('unreadTitle').classList.remove('font-weight-bold');
+        document.getElementById('unreadBody').classList.add('mailContent');
+        document.getElementById('unreadBody').innerHTML = 'Agent Ausseil, Je vous fais parvenir comme convenu l...';
+        document.getElementById('validEmitter').classList.remove('font-weight-bold');
+        document.getElementById('validTitle').classList.remove('font-weight-bold');
+        document.getElementById('validBody').classList.add('mailContent');
+        document.getElementById('validBody').innerHTML = 'Confirmation des ordres de mission. Activation...'
     }
 }
 

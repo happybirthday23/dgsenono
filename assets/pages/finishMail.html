@@ -1,22 +1,131 @@
 <!DOCTYPE html>
 <html lang="FR">
 
-    <head>
-        <title>DGSE Intranet - Boîte de réception</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../../favicon.ico">
-        <link href="../../style.css" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    </head>
+<head>
+    <title>DGSE Intranet - Boîte de réception</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../favicon.ico">
+    <link href="../../style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
 
 <body>
-   <div class="d-flex mt-5 pt-5 flex-column justify-content-center align-items-center">
-       <h1>BRAVO !</h1>
-       <h3>Oui, cette page n'est pas terminée, mais elle le sera bientôt, pas de panique...</h3>
-       <a href="homePage.html">Accueil</a>
-   </div>
+    <div>Session : N. Ausseil - <a href="../../index.html">Déconnexion</a></div>
+    <header class="container-fluid mb-5">
+        <div class="row">
+            <div class="col-2 container-row">
+                <a href="homePage.html">
+                    <img class="col-12" src="../pictures/dgse_logo.jpg" alt="DGSE">
+                </a>
+            </div>
+            <h1 class="col-8 pt-5 m-auto text-center underline">Courrier électronique</h1>
+            <div class="col-2 container-row">
+                <div class="col-2"></div>
+                <img class="col-8" src="../pictures/min_armees_logo.jpg" alt="Ministrère des armées">
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="container-fluid row">
+            <div class="col-2 no-gutters pt-3 container mailMenu">
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/inbox_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="mailBox.html#allRead">Boîte de réception</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/sent_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="sentBox.html">Envoyés</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/draft_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="drafts.html">Brouillons</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/spam_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="spams.html">Spams</a>
+                </div>
+                <div class="row">
+                    <div class="col-2 no-gutters">
+                        <img class="col-12" src="../pictures/trash_icon.png" alt="inbox">
+                    </div>
+                    <a class="col-10 no-gutters pl-0" href="trashbin.html">Corbeille</a>
+                </div>
+            </div>
+            <div class="col-10 no-gutters mailContainer pb-4">
+                <div>
+                    <h2>Mission I 51MP50N - Brief mission validé</h2>
+                    <div class="container row">
+                        <div class="col-1 container-row">
+                            <img class="col-12 no-gutters" src="../pictures/dgse_icon.png" alt="DGSE BOT">
+                        </div>
+                        <div class="col-9 no-gutters">
+                            <p><span class="emitterName">DGSE - BOT</span> - <span
+                                    class="emitterAddress">no_reply_bot@dgse.gouv.fr</span></p>
+                        </div>
+                        <div class="col-2 text-right">
+                            <p class="emitterDate">25 juillet - 12:00</p> <!-- TODO : changer date -->
+                        </div>
+                    </div>
+                    <p>Confirmation des ordres de mission.</p>
+                    <p class="mt-2">
+                        Activation des agents confirmée.</p>
+                    <p>Transmission des informations sur canal crypté </p>
+                    <h6>Rappel des informations de mission : 
+                    </h6>
+                    <p>Rendez-vous avec l'équipe à <strong>17 : 30</strong> au lieu suivant : <strong>Dream Café, 8 rue des Martyrs, 75009 PARIS</strong>.</p>
+                    <hr>
+                    <button class="btn btn-secondary" onclick="openModal('deniedModal')">Répondre</button>
+
+                </div>
+            </div>
+        </div>
+        <div id="enclosedModal01" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('enclosedModal01')">&times;</span>
+                <div class="container row">
+                    <img class="col-12" src="../pictures/attachement.jpg" alt="Bière">
+                </div>
+            </div>
+        </div>
+        <div id="enclosedModal02" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('enclosedModal02')">&times;</span>
+                <div class=" container row">
+                    <img class="col-12 m-auto" src="../pictures/attachement2.jpg" alt="Bière2">
+                </div>
+            </div>
+        </div>
+        <div id="enclosedModal03" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('enclosedModal03')">&times;</span>
+                <div class=" container row">
+                    <img class="col-12 m-auto" src="../pictures/attachement3.jpg" alt="Code">
+                </div>
+            </div>
+        </div>
+        <div id="deniedModal" class="modal">
+            <div class="modalContent">
+                <span id="closeIcon" class="close" onclick="closeModal('deniedModal')">&times;</span>
+                <div class="container-fluid no-gutters row">
+                    <div class="col-12 text-center pb-4">
+                        <h3 class="text-danger">Réponse au bot impossible.</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
     <script src="../../script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
