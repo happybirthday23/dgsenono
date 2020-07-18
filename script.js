@@ -111,6 +111,10 @@ function mailRedirect() {
     }
 }
 
+function hashLink(link) {
+    window.location.href = link + window.location.hash;
+}
+
 function readCheck() {
     if (window.location.hash == '#validated') {
         document.getElementById('validationEmail').classList.remove('d-none');
@@ -128,8 +132,40 @@ function readCheck() {
         document.getElementById('validTitle').classList.remove('font-weight-bold');
         document.getElementById('validBody').classList.add('mailContent');
         document.getElementById('validBody').innerHTML = 'Confirmation des ordres de mission. Activation...'
+    } else if (window.location.hash == '#read') {
+        document.getElementById('unreadEmitter').classList.remove('font-weight-bold');
+        document.getElementById('unreadTitle').classList.remove('font-weight-bold');
+        document.getElementById('unreadBody').classList.add('mailContent');
+        document.getElementById('unreadBody').innerHTML = 'Agent Ausseil, Je vous fais parvenir comme convenu l...';
     }
 }
+
+// Affichage de la date
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i
+    }
+
+    return i;
+}
+
+let n = new Date();
+let d = n.getDate();
+let h = n.getUTCHours();
+let m = addZero(n.getUTCMinutes());
+
+let finishDate = document.getElementById('finishDate');
+
+if (finishDate) {
+    finishDate.innerHTML = d + ' juil. - ' + h + ':' + m;
+}
+
+let emitterDate = document.getElementById('emitterDate');
+
+if (emitterDate) {
+    emitterDate.innerHTML = d + ' juillet - ' + h + ':' + m;
+}
+
 
 function hoverMap() {
     let mousePosX = event.clientX;
