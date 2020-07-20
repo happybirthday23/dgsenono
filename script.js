@@ -197,6 +197,100 @@ function clearHover() {
     svgMap.removeChild(coordinates);
 }
 
+function statusAnimation() {
+
+    let statusFrames = document.getElementsByClassName('statusFrame');
+    let cpt = 0;
+
+    for (let frame of statusFrames) {
+
+        let randomDelay = Math.random() * (5000 - 3000) + 3000;
+        let paths = frame.getElementsByTagName('path');
+        let texts = frame.getElementsByTagName('text');
+
+        setTimeout(
+            function () {
+                for (let path of paths) {
+                    path.setAttribute('stroke', 'yellow');
+                }
+
+                for (let text of texts) {
+                    text.setAttribute('stroke', 'yellow');
+                    text.setAttribute('x', '67');
+                    text.innerHTML = 'STANDBY';
+                }
+
+                setTimeout(
+                    function () {
+                        cpt++;
+                        for (let path of paths) {
+                            path.setAttribute('stroke', 'rgb(0, 255, 0)');
+                        }
+
+                        for (let text of texts) {
+                            text.setAttribute('stroke', 'rgb(0, 255, 0)');
+                            text.setAttribute('x', '67');
+                            text.innerHTML = 'ACTIVE';
+                        }
+
+                        document.getElementById('activeNumber').innerHTML = cpt;
+
+                    }, randomDelay + randomDelay / 10
+                );
+            }, randomDelay
+        );
+    }
+
+    setTimeout(
+        function () {
+            let totalNumber = document.getElementById('totalNumber');
+            totalNumber.innerHTML = '1';
+            setTimeout(
+                function () {
+                    totalNumber.innerHTML = '2';
+                    setTimeout(
+                        function () {
+                            totalNumber.innerHTML = '3';
+                            setTimeout(
+                                function () {
+                                    totalNumber.innerHTML = '4';
+                                    setTimeout(
+                                        function () {
+                                            totalNumber.innerHTML = '5';
+                                        }, 100
+                                    );
+                                }, 100
+                            );
+                        }, 200
+                    );
+                }, 200
+            );
+        }, 1100
+    );
+
+    setTimeout(
+        function () {
+            let activationProgress = document.getElementById('activationProgress');
+            activationProgress.innerHTML = 'Envoi des instructions.';
+            setTimeout(
+                function () {
+                    activationProgress.innerHTML = 'Attente de confirmation.';
+                    setTimeout(
+                        function() {
+                            activationProgress.innerHTML = 'Activation terminée.';
+                            setTimeout(
+                                function() {
+                                    window.location.href= 'homePage.html#validated';
+                                }, 1000
+                            );
+                        }, 7000
+                    );
+                }, 1500
+            );
+        }, 1900
+    );
+}
+
 /* A retravailler
 function clickMap() {
     let mousePosX = event.clientX;
@@ -278,7 +372,7 @@ function activationCheck() {
     let rdvPlace = document.getElementById('rdvPlace').value;
 
     if (rdvTime == '17:30' && rdvPlace == 'Dream Café') {
-        window.location.href = 'homePage.html#validated';
+        window.location.href = 'activationLoad.html';
     } else if (rdvPlace == 'Dream Café') {
         let excuses = [
             'Est à la salle.',
