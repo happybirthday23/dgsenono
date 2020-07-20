@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+.row:before, .row:after {
+    display: inline-block;
+}
+
 header {
     margin-bottom: 10%;
 }
