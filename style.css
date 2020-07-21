@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
-.row:before, .row:after {
-    display: inline-block;
-}
-
 header {
     margin-bottom: 10%;
 }
@@ -478,6 +474,15 @@ h1 {
     80% {
         opacity: 0;
     }
+}
+
+/* Specific rules for sh***y mac */
+.row:before, .row:after {
+    display: inline-block;
+}
+
+.container {
+    align-items: flex-start;
 }
 
 
