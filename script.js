@@ -216,6 +216,7 @@ function statusAnimation() {
 
                 for (let text of texts) {
                     text.setAttribute('stroke', 'yellow');
+                    text.setAttribute('fill', 'yellow');
                     text.setAttribute('x', '67');
                     text.innerHTML = 'STANDBY';
                 }
@@ -229,6 +230,7 @@ function statusAnimation() {
 
                         for (let text of texts) {
                             text.setAttribute('stroke', 'rgb(0, 255, 0)');
+                            text.setAttribute('fill', 'rgb(0, 255, 0)');
                             text.setAttribute('x', '67');
                             text.innerHTML = 'ACTIVE';
                         }
