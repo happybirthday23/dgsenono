@@ -11,7 +11,7 @@
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 
-<body onload="console.log(window.navigator.userAgent); console.log(window.navigator.platform)">
+<body onload="deviceCheck()">
     <header class="container-fluid">
         <div class="row">
             <div class="col-2 container-row">
@@ -42,6 +42,20 @@
             <button class="btn btn-primary" onclick="login()" onsubmit="event.preventDefault()">Connexion</button>
         </div>
     </form>
+
+    <div id="deviceModal" class="modal">
+        <div id="deviceModalContent" class="modalContent">
+            <div class="container-fluid no-gutters row">
+                <div class="col-12">
+                    <h2 class="text-center text-danger">Accès refusé</h2>
+                    <p>Votre appareil n'est pas conforme aux normes de sécurité GTF0-WTH-UR-M0B173 et GTF0-WTH-UR-M4C.</p>
+                    <p>Veuillez vous connecter depuis un ordinateur sécurisé opérant sous système Windows.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
     <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">

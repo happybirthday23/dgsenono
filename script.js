@@ -1,6 +1,20 @@
 const videoModal = document.getElementById('videoModal');
 const closeIcon = document.getElementById('closeIcon');
 
+function deviceCheck() {
+
+    console.log(window.navigator.userAgent);
+
+    let platform = window.navigator.platform;
+
+    if (platform.startsWith('Mac') || screen.width < 500) {
+        openModal('deviceModal');
+        document.getElementById('loginForm').style.display = 'none';
+    }
+
+
+}
+
 function login() {
 
     document.getElementById('username').classList.remove('is-invalid');
