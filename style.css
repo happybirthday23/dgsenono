@@ -515,3 +515,9 @@ h1 {
     transform: scale3d(1, 1, 1);
     transition: transform 0.5s;
 }
+
+@media(max-width: 500px) {
+    #loginForm {
+        min-width: 75%;
+    }
+}
