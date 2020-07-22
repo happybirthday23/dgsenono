@@ -3,11 +3,12 @@ const closeIcon = document.getElementById('closeIcon');
 
 function deviceCheck() {
 
-    console.log(window.navigator.userAgent);
-
     let platform = window.navigator.platform;
+    let isSafari = /constructor/i.test(window.HTMLElement) || (function (p) {
+        return p.toString() === "[object SafariRemoteNotification]";
+    })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
 
-    if (platform.startsWith('Mac') || screen.width < 500) {
+    if (isSafari || screen.width < 500) {
         openModal('deviceModal');
         document.getElementById('loginForm').style.display = 'none';
     }
@@ -292,11 +293,11 @@ function statusAnimation() {
                 function () {
                     activationProgress.innerHTML = 'Attente de confirmation.';
                     setTimeout(
-                        function() {
+                        function () {
                             activationProgress.innerHTML = 'Activation terminée.';
                             setTimeout(
-                                function() {
-                                    window.location.href= 'homePage.html#validated';
+                                function () {
+                                    window.location.href = 'homePage.html#validated';
                                 }, 1000
                             );
                         }, 7000
